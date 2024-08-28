@@ -1,24 +1,18 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+I developed a full-featured user authentication system using Ruby on Rails through GoRails Ruby on Rails for beginners Tutorial, focusing on essential functionalities such as user registration, login, and password management. The application allows users to sign up, log in, edit their profiles, and reset their passwords securely.
 
-Things you may want to cover:
+Key Features:
 
-* Ruby version
+- User Registration and Login: Implemented a secure sign-up process where users can create an account with an email and password. The login feature authenticates users, ensuring only registered users can access the system.
+- Password Management: Developed a password reset functionality using Session-cookies-based authentication, allowing users to securely reset their passwords via email.
+- Profile Editing: Users can update their personal information, including their passwords, through a profile management interface.
 
-* System dependencies
+Technologies Used:
 
-* Configuration
+- Ruby on Rails: For the core application framework and MVC architecture.
+- Bootstrap: For responsive front-end design.
+- Mailer: To send password reset instructions to users.
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Outcome: 
+This project enhanced my understanding of web application security, authentication mechanisms, and the Ruby on Rails framework. It served as a foundational step in my journey to mastering web development with Rails.
