@@ -1,6 +1,6 @@
 <div style="width:50%;border:1px solid #6c757d;border-radius:15px;padding:20px;margin-top:30px">
-<h1>Sign Up</h1><br>
-<%= form_with model: @user, url:sign_up_path, local: true do |form| %>
+<h1>Edit Password</h1><br>
+<%= form_with model: Current.user, url:edit_password_path, local: true do |form| %>
     <% if form.object.errors.any? %>
     <div class="alert alert-danger">
         <% form.object.errors.full_messages.each do |message| %>
@@ -8,10 +8,6 @@
         <% end %>
     </div>
     <% end %>
-    <div class="mb-3">
-        <%= form.label :email %>
-        <%= form.text_field :email, class: "form-control", placeholder: "examplename@gmail.com" %>
-    </div>
     <div class="mb-3">
         <%= form.label :password %>
         <%= form.password_field :password, class: "form-control", placeholder: "password" %>
@@ -21,7 +17,7 @@
         <%= form.password_field :password_confirmation, class: "form-control", placeholder: "password" %>
     </div>
     <div class="mb-3" style ="text-align:center">
-        <%= form.submit "Sign Up", class: "btn btn-primary"%>
+        <%= form.submit "Update Password", class: "btn btn-primary"%>
     </div>
 <% end %>
 </div>
