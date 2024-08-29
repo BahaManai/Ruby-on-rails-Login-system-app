@@ -1,5 +1,4 @@
-<div style="width:50%;border:1px solid #6c757d;border-radius:15px;padding:20px;margin-top:30px">
-<h1>Edit Password</h1><br>
+<div style="max-width:550px;border:1px solid #6c757d;border-radius:15px;padding:20px;margin-top:30px;margin: 0 auto"><h1>Edit Password</h1><br>
 <%= form_with model: Current.user, url:edit_password_path, local: true do |form| %>
     <% if form.object.errors.any? %>
     <div class="alert alert-danger">

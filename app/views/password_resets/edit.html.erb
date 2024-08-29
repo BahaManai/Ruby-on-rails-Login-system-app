@@ -1,17 +1,12 @@
-<div style="max-width:550px;border:1px solid #6c757d;border-radius:15px;padding:20px;margin-top:30px;margin: 0 auto">
-<h1>Sign Up</h1><br>
-<%= form_with model: @user, url:sign_up_path, local: true do |form| %>
-    <% if form.object.errors.any? %>
+<div style="max-width:550px;border:1px solid #6c757d;border-radius:15px;padding:20px;margin-top:30px;margin: 0 auto"><h1>Reset your password</h1><br>
+<%= form_with model: @user, url:password_reset_edit_path(token: params[:token]), local: true do |form| %>
+<% if form.object.errors.any? %>
     <div class="alert alert-danger">
         <% form.object.errors.full_messages.each do |message| %>
             <div><%= message %></div>
         <% end %>
     </div>
     <% end %>
-    <div class="mb-3">
-        <%= form.label :email %>
-        <%= form.text_field :email, class: "form-control", placeholder: "examplename@gmail.com" %>
-    </div>
     <div class="mb-3">
         <%= form.label :password %>
         <%= form.password_field :password, class: "form-control", placeholder: "password" %>
@@ -21,7 +16,7 @@
         <%= form.password_field :password_confirmation, class: "form-control", placeholder: "password" %>
     </div>
     <div class="mb-3" style ="text-align:center">
-        <%= form.submit "Sign Up", class: "btn btn-primary"%>
+        <%= form.submit "Reset Password", class: "btn btn-primary"%>
     </div>
 <% end %>
 </div>
