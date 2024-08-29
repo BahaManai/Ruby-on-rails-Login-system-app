@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :articles
+
   get "about", to: "about#index", as: :about
 
   get "sign_up", to: "registrations#new"

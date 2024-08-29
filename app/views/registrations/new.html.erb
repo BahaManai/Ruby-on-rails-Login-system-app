@@ -1,4 +1,4 @@
-<div style="max-width:550px;border:1px solid #6c757d;border-radius:15px;padding:20px;margin-top:30px;margin: 0 auto">
+<div class="formulaire">
 <h1>Sign Up</h1><br>
 <%= form_with model: @user, url:sign_up_path, local: true do |form| %>
     <% if form.object.errors.any? %>
