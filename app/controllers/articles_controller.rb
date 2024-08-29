@@ -15,7 +15,7 @@ class ArticlesController < ApplicationController
 
   def create
     # The create action instantiates a new article with values for the title and body, and attempts to save it.
-    @article = Article.new(title: "...", body: "...")
+    @article = Article.new(article_params)
 
     if @article.save
       redirect_to @article
@@ -23,4 +23,9 @@ class ArticlesController < ApplicationController
       render :new, status: :unprocessable_entity
     end
   end
+
+  private
+    def article_params
+      params.require(:article).permit(:title, :body)
+    end
 end
