@@ -1,0 +1,30 @@
+<div class="formulaire">
+<%= form_with model: [ article, article.comments.build ] do |form| %>
+    <h1>Add a comment</h1>
+
+  <div class="mb-3">
+    <%= form.label :commenter ,class: "form-label" %><br>
+    <%= form.text_field :commenter ,class: "form-control" %>
+    <% if form.object.errors[:commenter].any? %>
+        <div><%= form.object.errors.full_messages_for(:commenter).join(", ") %></div>
+      <% end %>
+  </div>
+
+  <div class="mb-3">
+    <%= form.label :body ,class: "form-label" %><br>
+    <%= form.text_area :body ,class: "form-control", rows: 2 %><br>
+    <% if form.object.errors[:body].any? %>
+        <div><%= form.object.errors.full_messages_for(:body).join(", ") %></div>
+      <% end %>
+  </div>
+    
+    <div class="mb-3">
+  <%= form.label :status ,class: "form-label" %><br>
+  <%= form.select :status, Visible::VALID_STATUSES, selected: 'public'%>
+  </div>
+
+  <div>
+    <%= form.submit "Create comment", class: "btn btn-primary"%>
+  </div>
+<% end %>
+</div>

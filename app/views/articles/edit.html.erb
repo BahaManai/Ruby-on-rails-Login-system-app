@@ -16,7 +16,12 @@
       <div><%= message %></div>
     <% end %>
   </div>
-    
+
+    <div class="mb-3">
+  <%= form.label :status ,class: "form-label" %><br>
+  <%= form.select :status, Visible::VALID_STATUSES, selected: @article.status || 'public' ,class: "form-control" %>
+  </div>
+
   <div>
     <%= form.submit "Edit", class: "btn btn-primary"%>
   </div>

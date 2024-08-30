@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
-  resources :articles
+  resources :articles do
+    resources :comments
+  end
 
   get "about", to: "about#index", as: :about
 
@@ -19,7 +21,7 @@ Rails.application.routes.draw do
   get "password/reset/edit", to: "password_resets#edit"
   patch "password/reset/edit", to: "password_resets#update"
 
-  root to: "main#index"
+  root to: "articles#index"
 
 
 
