@@ -28,5 +28,8 @@
     text-align: center;
 }
 .image_about{
-    width:70%;
+    width:80%;
+}
+#AddCommentSection{
+    margin: 20px 0px;
 }

@@ -1,4 +1,4 @@
-<div class="formulaire">
+<div class="formulaire" id="AddCommentSection">
 <%= form_with model: [ article, article.comments.build ] do |form| %>
     <h1>Add a comment</h1>
 
@@ -18,9 +18,9 @@
       <% end %>
   </div>
     
-    <div class="mb-3">
+<div class="mb-3">
   <%= form.label :status ,class: "form-label" %><br>
-  <%= form.select :status, Visible::VALID_STATUSES, selected: 'public'%>
+  <%= form.select :status, Visible::VALID_STATUSES, { selected: 'public' }, { class: "form-select", aria: { label: "Default select example" } } %>
   </div>
 
   <div>

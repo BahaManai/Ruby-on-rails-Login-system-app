@@ -19,7 +19,7 @@
     
     <div class="mb-3">
   <%= form.label :status ,class: "form-label" %><br>
-  <%= form.select :status, Visible::VALID_STATUSES, selected: @article.status || 'public' ,class: "form-control" %>
+  <%= form.select :status, Visible::VALID_STATUSES, { selected: @article.status || 'public' }, { class: "form-select", aria: { label: "Default select example" } } %>
   </div>
 
   <div>
